@@ -136,7 +136,7 @@
     justify-content: center;
     text-align: center;
     position: relative;
-    padding: 8rem 2rem 4rem;
+    padding: 10rem 2rem 4rem;
     overflow: hidden;
   }
 
@@ -320,6 +320,14 @@
   }
 
   /* ── SERVICE AREA STRIP ── */
+  .area-strip-top {
+    position: fixed;
+    top: 68px;
+    left: 0;
+    right: 0;
+    z-index: 850;
+  }
+
   .area-strip {
     background: var(--charcoal);
     border-top: 1px solid rgba(201,148,10,0.15);
@@ -1082,32 +1090,8 @@
   </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-bg"></div>
-  <div class="hero-lines"></div>
-  <div class="hero-content">
-    <div style="margin-bottom: 2rem; opacity: 0; animation: fadeUp 0.8s ease forwards 0.1s;">
-      <img src="Southern_Cut_Gold_Shine_Transparent.png" alt="Southern Cut Detailing" style="height: clamp(280px, 40vw, 550px); width: auto; max-width: 95vw;">
-    </div>
-    <p class="hero-eyebrow">Premium Mobile Auto Detailing &nbsp;·&nbsp; Northwest Georgia</p>
-    <div class="hero-divider"></div>
-    <p class="hero-tagline">
-      <span>Cleaner.</span> &nbsp; Sharper. &nbsp; <span>Southern.</span>
-    </p>
-    <div class="hero-cta-group">
-      <a href="https://book.squareup.com/appointments/pq244plmzvisu9/location/LPTESV9XR4YB6/services" target="_blank" class="btn-primary"><span>Book Your Detail</span></a>
-      <a href="#services" class="btn-secondary">View Services</a>
-    </div>
-  </div>
-  <div class="hero-scroll">
-    <div class="scroll-line"></div>
-    <span>Scroll</span>
-  </div>
-</section>
-
-<!-- SERVICE AREA STRIP -->
-<div class="area-strip">
+<!-- SERVICE AREA STRIP — fixed below nav -->
+<div class="area-strip area-strip-top">
   <div class="area-scroll">
     <span class="area-item"><span>✦</span> Woodstock</span>
     <span class="area-item"><span>✦</span> Acworth</span>
@@ -1131,6 +1115,30 @@
     <span class="area-item"><span>✦</span> Vinings</span>
   </div>
 </div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-lines"></div>
+  <div class="hero-content">
+    <div style="margin-bottom: 2rem; opacity: 0; animation: fadeUp 0.8s ease forwards 0.1s;">
+      <img src="Southern_Cut_Gold_Shine_Transparent.png" alt="Southern Cut Detailing" style="height: clamp(280px, 40vw, 550px); width: auto; max-width: 95vw;">
+    </div>
+    <p class="hero-eyebrow">Premium Mobile Auto Detailing &nbsp;·&nbsp; Northwest Georgia</p>
+    <div class="hero-divider"></div>
+    <p class="hero-tagline">
+      <span>Cleaner.</span> &nbsp; Sharper. &nbsp; <span>Southern.</span>
+    </p>
+    <div class="hero-cta-group">
+      <a href="https://book.squareup.com/appointments/pq244plmzvisu9/location/LPTESV9XR4YB6/services" target="_blank" class="btn-primary"><span>Book Your Detail</span></a>
+      <a href="#services" class="btn-secondary">View Services</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
 
 <!-- WHY -->
 <section id="why">

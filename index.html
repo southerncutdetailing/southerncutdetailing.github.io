@@ -71,13 +71,16 @@
     text-decoration: none;
     display: flex;
     align-items: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--white);
+    line-height: 1.1;
   }
 
-  .nav-brand img {
-    height: 64px;
-    width: auto;
-    display: block;
-  }
+  .nav-brand span { color: var(--gold); }
 
   .nav-links {
     display: flex;
@@ -1066,7 +1069,7 @@
 
 <!-- NAV -->
 <nav id="navbar">
-  <a href="#" class="nav-brand"><img src="Southern_Cut_Gold_Shine_Transparent.png" alt="Southern Cut Detailing"></a>
+  <a href="#" class="nav-brand">SOUTHERN <span>&nbsp;CUT&nbsp;</span> DETAILING</a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#services">Services</a></li>
     <li><a href="#contracts">Contracts</a></li>
@@ -1085,7 +1088,7 @@
   <div class="hero-lines"></div>
   <div class="hero-content">
     <div style="margin-bottom: 2rem; opacity: 0; animation: fadeUp 0.8s ease forwards 0.1s;">
-      <img src="Southern_Cut_Gold_Shine_Transparent.png" alt="Southern Cut Detailing" style="height: 380px; width: auto; max-width: 95vw;">
+      <img src="Southern_Cut_Gold_Shine_Transparent.png" alt="Southern Cut Detailing" style="height: clamp(280px, 40vw, 550px); width: auto; max-width: 95vw;">
     </div>
     <p class="hero-eyebrow">Premium Mobile Auto Detailing &nbsp;·&nbsp; Northwest Georgia</p>
     <div class="hero-divider"></div>

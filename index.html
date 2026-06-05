@@ -1069,6 +1069,22 @@
       grid-template-rows: repeat(3, 160px);
     }
     .gallery-item:first-child { grid-row: span 1; }
+
+    /* Hide scroll indicator on mobile */
+    .hero-scroll { display: none; }
+
+    /* Mobile hero CTA stack */
+    .hero-cta-group {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .btn-primary, .btn-secondary {
+      width: 100%;
+      text-align: center;
+    }
   }
 </style>
 </head>

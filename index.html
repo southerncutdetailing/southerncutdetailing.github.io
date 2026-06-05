@@ -928,9 +928,15 @@
   /* ── CONTACT ── */
   .contact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2px;
     margin-top: 3rem;
+  }
+
+  @media (max-width: 768px) {
+    .contact-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   .contact-card {
@@ -1510,7 +1516,7 @@
     </div>
     <div class="contact-card">
       <div class="contact-label">Book Online</div>
-      <a href="https://book.squareup.com/appointments/pq244plmzvisu9/location/LPTESV9XR4YB6/services" target="_blank" class="contact-value">Square Appointments</a>
+      <a href="https://book.squareup.com/appointments/pq244plmzvisu9/location/LPTESV9XR4YB6/services" target="_blank" class="contact-value">Book Your Detail</a>
     </div>
   </div>
 </section>

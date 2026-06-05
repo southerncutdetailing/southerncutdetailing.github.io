@@ -582,6 +582,26 @@
     margin-top: 0.25rem;
   }
 
+  .statesman-card {
+    background: rgba(26,26,26,0.4);
+    opacity: 0.65;
+    pointer-events: none;
+  }
+
+  .statesman-badge {
+    background: transparent !important;
+    border: 1px solid rgba(201,148,10,0.4) !important;
+    color: rgba(201,148,10,0.6) !important;
+  }
+
+  .statesman-features li {
+    color: rgba(204,204,204,0.35) !important;
+  }
+
+  .statesman-features li::before {
+    color: rgba(201,148,10,0.3) !important;
+  }
+
   /* ── ADDONS ── */
   .addons-grid {
     display: grid;
@@ -1226,12 +1246,12 @@
         <div class="service-subtitle">Full Detail + Protection</div>
         <ul class="service-features">
           <li>Everything in The Local</li>
-          <li>Steam clean — vents, seams & surfaces</li>
+          <li>Steam clean — vents, seams, surfaces</li>
           <li>Clay bar paint decontamination</li>
           <li>Iron fallout removal</li>
           <li>3-layer carpet extraction</li>
           <li>Leather cleaning & conditioning</li>
-          <li>Spray paint sealant + glass coating</li>
+          <li>Paint sealant + glass coating</li>
         </ul>
         <div class="service-price">
           <div class="price-from">Starting from</div>
@@ -1262,25 +1282,25 @@
         </div>
       </div>
 
-      <!-- THE LEGACY -->
-      <div class="service-card">
-        <div class="service-badge" style="background: transparent; border: 1px solid var(--gold); color: var(--gold);">Coming Soon</div>
-        <div class="service-tier">Tier 04</div>
-        <div class="service-name">The Legacy</div>
-        <div class="service-subtitle">Paint Correction + Ceramic Coating</div>
-        <ul class="service-features">
+      <!-- THE STATESMAN -->
+      <div class="service-card statesman-card">
+        <div class="service-badge statesman-badge">Coming Soon</div>
+        <div class="service-tier" style="color: var(--gray);">Tier 04</div>
+        <div class="service-name" style="color: rgba(255,255,255,0.4);">The Statesman</div>
+        <div class="service-subtitle" style="color: rgba(136,136,136,0.5);">Paint Correction + Ceramic Coating</div>
+        <ul class="service-features statesman-features">
           <li>Everything in The Southern CUT</li>
           <li>Single-stage paint correction</li>
-          <li>Professional ceramic coating — paint</li>
+          <li>Ceramic coating — paint</li>
           <li>Ceramic coating — glass, wheels & trim</li>
           <li>Years of protection, not months</li>
           <li>Maintenance kit included</li>
           <li>Requires garage access for cure</li>
         </ul>
-        <div class="service-price">
-          <div class="price-from">Starting from</div>
-          <div class="price-amount">$900</div>
-          <div class="price-note">Trucks & SUVs from $1,100 · 50% deposit required</div>
+        <div class="service-price" style="border-top: 1px solid rgba(201,148,10,0.1);">
+          <div class="price-from" style="color: rgba(136,136,136,0.5);">Starting from</div>
+          <div class="price-amount" style="color: rgba(201,148,10,0.35);">$900</div>
+          <div class="price-note">Trucks & SUVs from $1,100 · 50% deposit</div>
         </div>
       </div>
 

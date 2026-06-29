@@ -1370,7 +1370,7 @@
           <li>Prepaid monthly — no surprises</li>
           <li>3-month minimum, then month-to-month</li>
         </ul>
-        <div class="contract-note">The Local from $158/mo &nbsp;·&nbsp; The Southerner from $270/mo &nbsp;·&nbsp; The Southern CUT from $360/mo</div>
+        <div class="contract-note">The Local from $158/mo</div>
       </div>
 
       <div class="contract-card featured">
@@ -1384,7 +1384,7 @@
           <li>Prepaid monthly — locked in rate</li>
           <li>3-month minimum, then month-to-month</li>
         </ul>
-        <div class="contract-note">The Local from $300/mo &nbsp;·&nbsp; The Southerner from $513/mo &nbsp;·&nbsp; The Southern CUT from $684/mo</div>
+        <div class="contract-note">The Local from $300/mo</div>
       </div>
     </div>
 
@@ -1573,6 +1573,12 @@
   </div>
 </section>
 
+<!-- LIGHTBOX -->
+<div id="lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.93);z-index:9999;align-items:center;justify-content:center;cursor:zoom-out;">
+  <img id="lightbox-img" style="max-width:92vw;max-height:90vh;object-fit:contain;display:block;box-shadow:0 8px 60px rgba(0,0,0,0.8);">
+  <button id="lightbox-close" style="position:absolute;top:1.25rem;right:1.75rem;background:none;border:none;color:#C9940A;font-size:2.5rem;line-height:1;cursor:pointer;padding:0.25rem 0.5rem;">&#x2715;</button>
+</div>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-brand">Southern Cut Detailing LLC</div>
@@ -1618,6 +1624,30 @@
   }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
   reveals.forEach(el => observer.observe(el));
+  // Lightbox
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lightbox-img');
+  const lbClose = document.getElementById('lightbox-close');
+
+  document.querySelectorAll('.gallery-item img, .gallery-reel-item img').forEach(img => {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', e => {
+      e.stopPropagation();
+      lbImg.src = img.src;
+      lb.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeLb() {
+    lb.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  lb.addEventListener('click', closeLb);
+  lbClose.addEventListener('click', e => { e.stopPropagation(); closeLb(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
+
 </script>
 
 </body>

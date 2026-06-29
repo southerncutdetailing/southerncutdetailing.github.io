@@ -1395,40 +1395,107 @@
 </div>
 
 <!-- GALLERY -->
+<style>
+  .gallery-reel-outer {
+    overflow: hidden;
+    margin-top: 2px;
+    position: relative;
+  }
+  .gallery-reel-track {
+    display: flex;
+    gap: 2px;
+    animation: reelScroll 28s linear infinite;
+    width: max-content;
+  }
+  .gallery-reel-outer:hover .gallery-reel-track {
+    animation-play-state: paused;
+  }
+  .gallery-reel-item {
+    width: 320px;
+    height: 220px;
+    flex-shrink: 0;
+    overflow: hidden;
+    background: var(--charcoal);
+  }
+  .gallery-reel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  .gallery-reel-item:hover img {
+    transform: scale(1.04);
+  }
+  @keyframes reelScroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .gallery-label {
+    display: inline-block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 2;
+  }
+  .gallery-label.before { background: rgba(10,10,10,0.85); color: #888888; }
+  .gallery-label.after  { background: var(--gold); color: var(--black); }
+  .gallery-item { position: relative; }
+</style>
+
 <div class="gallery-wrapper" id="gallery">
   <div class="gallery-inner">
     <div class="reveal">
       <p class="section-label">Our Work</p>
       <h2 class="section-title">The <em>Results</em> Speak</h2>
-      <p class="section-body">A curated look at our work across Northwest Georgia. For real-time before and after photos follow us on Instagram and Facebook.</p>
+      <p class="section-body">Before and after from a single job across Northwest Georgia. Engine bay, interior, and exterior — every surface treated.</p>
     </div>
+
     <div class="gallery-grid reveal">
       <div class="gallery-item">
-        <img src="20260627_154156.jpg" alt="VW Atlas after full detail — Southern Cut Detailing" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <span class="gallery-label after">After</span>
+        <img src="20260627_154156.jpg" alt="VW Atlas exterior after full detail — Southern Cut Detailing" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
       <div class="gallery-item">
-        <img src="20260627_154320.jpg" alt="VW Atlas side profile after detail — Southern Cut Detailing" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <span class="gallery-label after">After</span>
+        <img src="20260627_101513.jpg" alt="Engine bay after cleaning — Southern Cut Detailing" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
       <div class="gallery-item">
-        <img src="20260627_154313.jpg" alt="VW Atlas after detail — Southern Cut Detailing" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <span class="gallery-label before">Before</span>
+        <img src="20260627_092839.jpg" alt="Engine bay before cleaning — Southern Cut Detailing" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
       <div class="gallery-item">
-        <div class="gallery-placeholder">
-          <div class="gallery-placeholder-icon">
-            <svg width="16" height="16" fill="none" stroke="#C9940A" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-          </div>
-          <span>Interior Coming</span>
-        </div>
+        <span class="gallery-label after">After</span>
+        <img src="20260627_154137.jpg" alt="Interior rear cabin after detail — Southern Cut Detailing" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
       <div class="gallery-item">
-        <div class="gallery-placeholder">
-          <div class="gallery-placeholder-icon">
-            <svg width="16" height="16" fill="none" stroke="#C9940A" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-          </div>
-          <span>Engine Bay Coming</span>
-        </div>
+        <span class="gallery-label before">Before</span>
+        <img src="20260627_091449.jpg" alt="Interior rear mats before detail — Southern Cut Detailing" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
     </div>
+
+    <div class="gallery-reel-outer reveal">
+      <div class="gallery-reel-track">
+        <div class="gallery-reel-item"><img src="20260627_154320.jpg" alt="VW Atlas side profile after detail"></div>
+        <div class="gallery-reel-item"><img src="20260627_154313.jpg" alt="VW Atlas exterior after detail"></div>
+        <div class="gallery-reel-item"><img src="20260627_153935.jpg" alt="Driver footwell after detail"></div>
+        <div class="gallery-reel-item"><img src="20260627_154133.jpg" alt="Rear floor after detail"></div>
+        <div class="gallery-reel-item"><img src="20260627_092823.jpg" alt="Engine bay before cleaning"></div>
+        <!-- duplicate set for seamless loop -->
+        <div class="gallery-reel-item"><img src="20260627_154320.jpg" alt="VW Atlas side profile after detail"></div>
+        <div class="gallery-reel-item"><img src="20260627_154313.jpg" alt="VW Atlas exterior after detail"></div>
+        <div class="gallery-reel-item"><img src="20260627_153935.jpg" alt="Driver footwell after detail"></div>
+        <div class="gallery-reel-item"><img src="20260627_154133.jpg" alt="Rear floor after detail"></div>
+        <div class="gallery-reel-item"><img src="20260627_092823.jpg" alt="Engine bay before cleaning"></div>
+      </div>
+    </div>
+
     <p class="gallery-coming reveal">Follow <span>@southerncutdetailing</span> on Instagram and Facebook for real-time before and after photos</p>
   </div>
 </div>

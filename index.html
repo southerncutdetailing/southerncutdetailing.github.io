@@ -227,13 +227,34 @@
     letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--gray);
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     opacity: 0;
     animation: fadeUp 0.8s ease forwards 0.7s;
     text-align: center;
   }
 
   .hero-tagline span { color: var(--gold); }
+
+  .hero-offer {
+    display: inline-block;
+    border: 1px solid rgba(201,148,10,0.5);
+    background: rgba(201,148,10,0.08);
+    color: var(--gold-pale);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.65rem 1.5rem;
+    margin-bottom: 2.5rem;
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards 0.8s;
+  }
+
+  .hero-offer strong {
+    color: var(--gold-light);
+    font-weight: 800;
+  }
 
   .hero-cta-group {
     display: flex;
@@ -902,6 +923,16 @@
     font-size: 1.1rem;
     letter-spacing: 0.15em;
     color: rgba(0,0,0,0.6);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+
+  .cta-offer {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    color: var(--black);
     margin-bottom: 2.5rem;
     text-transform: uppercase;
   }
@@ -1171,6 +1202,7 @@
     <p class="hero-tagline">
       <span>Cleaner.</span> &nbsp; Sharper. &nbsp; <span>Southern.</span>
     </p>
+    <p class="hero-offer">New Customers — Mention This Ad for <strong>20% Off</strong> Your First Service</p>
     <div class="hero-cta-group">
       <a href="https://book.squareup.com/appointments/pq244plmzvisu9/location/LPTESV9XR4YB6/services" target="_blank" class="btn-primary"><span>Book Your Detail</span></a>
       <a href="#services" class="btn-secondary">View Services</a>
@@ -1181,6 +1213,112 @@
     <span>Scroll</span>
   </div>
 </section>
+
+<!-- GALLERY -->
+<style>
+  .gallery-reel-outer {
+    overflow: hidden;
+    margin-top: 2px;
+    position: relative;
+  }
+  .gallery-reel-track {
+    display: flex;
+    gap: 2px;
+    animation: reelScroll 28s linear infinite;
+    width: max-content;
+  }
+  .gallery-reel-outer:hover .gallery-reel-track {
+    animation-play-state: paused;
+  }
+  .gallery-reel-item {
+    width: 320px;
+    height: 220px;
+    flex-shrink: 0;
+    overflow: hidden;
+    background: var(--charcoal);
+  }
+  .gallery-reel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  .gallery-reel-item:hover img {
+    transform: scale(1.04);
+  }
+  @keyframes reelScroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .gallery-label {
+    display: inline-block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 2;
+  }
+  .gallery-label.before { background: rgba(10,10,10,0.85); color: #888888; }
+  .gallery-label.after  { background: var(--gold); color: var(--black); }
+  .gallery-item { position: relative; }
+</style>
+
+<div class="gallery-wrapper" id="gallery">
+  <div class="gallery-inner">
+    <div class="reveal">
+      <p class="section-label">Our Work</p>
+      <h2 class="section-title">The <em>Results</em> Speak</h2>
+      <p class="section-body">Before and after from a single job across Northwest Georgia. Engine bay, interior, and exterior — every surface treated.</p>
+    </div>
+
+    <div class="gallery-grid reveal">
+      <div class="gallery-item">
+        <span class="gallery-label after">After</span>
+        <img src="20260627_154156.jpg" alt="VW Atlas exterior after full detail — Southern Cut Detailing" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="gallery-item">
+        <span class="gallery-label before">Before</span>
+        <img src="20260627_092839.jpg" alt="Engine bay before cleaning — Southern Cut Detailing" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="gallery-item">
+        <span class="gallery-label after">After</span>
+        <img src="20260627_101513.jpg" alt="Engine bay after cleaning — Southern Cut Detailing" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="gallery-item">
+        <span class="gallery-label before">Before</span>
+        <img src="20260627_091449.jpg" alt="Interior rear mats before detail — Southern Cut Detailing" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="gallery-item">
+        <span class="gallery-label after">After</span>
+        <img src="20260627_154137.jpg" alt="Interior rear cabin after detail — Southern Cut Detailing" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+    </div>
+
+    <div class="gallery-reel-outer reveal">
+      <div class="gallery-reel-track">
+        <div class="gallery-reel-item"><img src="20260627_154320.jpg" alt="VW Atlas side profile after detail"></div>
+        <div class="gallery-reel-item"><img src="20260627_154313.jpg" alt="VW Atlas exterior after detail"></div>
+        <div class="gallery-reel-item"><img src="20260627_153935.jpg" alt="Driver footwell after detail"></div>
+        <div class="gallery-reel-item"><img src="20260627_154133.jpg" alt="Rear floor after detail"></div>
+        <div class="gallery-reel-item"><img src="20260627_092823.jpg" alt="Engine bay before cleaning"></div>
+        <!-- duplicate set for seamless loop -->
+        <div class="gallery-reel-item"><img src="20260627_154320.jpg" alt="VW Atlas side profile after detail"></div>
+        <div class="gallery-reel-item"><img src="20260627_154313.jpg" alt="VW Atlas exterior after detail"></div>
+        <div class="gallery-reel-item"><img src="20260627_153935.jpg" alt="Driver footwell after detail"></div>
+        <div class="gallery-reel-item"><img src="20260627_154133.jpg" alt="Rear floor after detail"></div>
+        <div class="gallery-reel-item"><img src="20260627_092823.jpg" alt="Engine bay before cleaning"></div>
+      </div>
+    </div>
+
+    <p class="gallery-coming reveal">Follow <span>@southerncutdetailing</span> on Instagram and Facebook for real-time before and after photos</p>
+  </div>
+</div>
 
 <!-- WHY -->
 <section id="why">
@@ -1394,112 +1532,6 @@
   </div>
 </div>
 
-<!-- GALLERY -->
-<style>
-  .gallery-reel-outer {
-    overflow: hidden;
-    margin-top: 2px;
-    position: relative;
-  }
-  .gallery-reel-track {
-    display: flex;
-    gap: 2px;
-    animation: reelScroll 28s linear infinite;
-    width: max-content;
-  }
-  .gallery-reel-outer:hover .gallery-reel-track {
-    animation-play-state: paused;
-  }
-  .gallery-reel-item {
-    width: 320px;
-    height: 220px;
-    flex-shrink: 0;
-    overflow: hidden;
-    background: var(--charcoal);
-  }
-  .gallery-reel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.4s ease;
-  }
-  .gallery-reel-item:hover img {
-    transform: scale(1.04);
-  }
-  @keyframes reelScroll {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-  .gallery-label {
-    display: inline-block;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.6rem;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    padding: 0.2rem 0.6rem;
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    z-index: 2;
-  }
-  .gallery-label.before { background: rgba(10,10,10,0.85); color: #888888; }
-  .gallery-label.after  { background: var(--gold); color: var(--black); }
-  .gallery-item { position: relative; }
-</style>
-
-<div class="gallery-wrapper" id="gallery">
-  <div class="gallery-inner">
-    <div class="reveal">
-      <p class="section-label">Our Work</p>
-      <h2 class="section-title">The <em>Results</em> Speak</h2>
-      <p class="section-body">Before and after from a single job across Northwest Georgia. Engine bay, interior, and exterior — every surface treated.</p>
-    </div>
-
-    <div class="gallery-grid reveal">
-      <div class="gallery-item">
-        <span class="gallery-label after">After</span>
-        <img src="20260627_154156.jpg" alt="VW Atlas exterior after full detail — Southern Cut Detailing" style="width:100%;height:100%;object-fit:cover;display:block;">
-      </div>
-      <div class="gallery-item">
-        <span class="gallery-label after">After</span>
-        <img src="20260627_101513.jpg" alt="Engine bay after cleaning — Southern Cut Detailing" style="width:100%;height:100%;object-fit:cover;display:block;">
-      </div>
-      <div class="gallery-item">
-        <span class="gallery-label before">Before</span>
-        <img src="20260627_092839.jpg" alt="Engine bay before cleaning — Southern Cut Detailing" style="width:100%;height:100%;object-fit:cover;display:block;">
-      </div>
-      <div class="gallery-item">
-        <span class="gallery-label after">After</span>
-        <img src="20260627_154137.jpg" alt="Interior rear cabin after detail — Southern Cut Detailing" style="width:100%;height:100%;object-fit:cover;display:block;">
-      </div>
-      <div class="gallery-item">
-        <span class="gallery-label before">Before</span>
-        <img src="20260627_091449.jpg" alt="Interior rear mats before detail — Southern Cut Detailing" style="width:100%;height:100%;object-fit:cover;display:block;">
-      </div>
-    </div>
-
-    <div class="gallery-reel-outer reveal">
-      <div class="gallery-reel-track">
-        <div class="gallery-reel-item"><img src="20260627_154320.jpg" alt="VW Atlas side profile after detail"></div>
-        <div class="gallery-reel-item"><img src="20260627_154313.jpg" alt="VW Atlas exterior after detail"></div>
-        <div class="gallery-reel-item"><img src="20260627_153935.jpg" alt="Driver footwell after detail"></div>
-        <div class="gallery-reel-item"><img src="20260627_154133.jpg" alt="Rear floor after detail"></div>
-        <div class="gallery-reel-item"><img src="20260627_092823.jpg" alt="Engine bay before cleaning"></div>
-        <!-- duplicate set for seamless loop -->
-        <div class="gallery-reel-item"><img src="20260627_154320.jpg" alt="VW Atlas side profile after detail"></div>
-        <div class="gallery-reel-item"><img src="20260627_154313.jpg" alt="VW Atlas exterior after detail"></div>
-        <div class="gallery-reel-item"><img src="20260627_153935.jpg" alt="Driver footwell after detail"></div>
-        <div class="gallery-reel-item"><img src="20260627_154133.jpg" alt="Rear floor after detail"></div>
-        <div class="gallery-reel-item"><img src="20260627_092823.jpg" alt="Engine bay before cleaning"></div>
-      </div>
-    </div>
-
-    <p class="gallery-coming reveal">Follow <span>@southerncutdetailing</span> on Instagram and Facebook for real-time before and after photos</p>
-  </div>
-</div>
-
 <!-- ABOUT -->
 <section id="about">
   <div class="about-grid">
@@ -1534,6 +1566,7 @@
   <div class="cta-inner">
     <h2 class="cta-title">Ready for a Cleaner Vehicle?</h2>
     <p class="cta-sub">Book online in minutes. We come to you.</p>
+    <p class="cta-offer">New Customers: Mention This Ad for 20% Off Your First Service</p>
     <a href="https://book.squareup.com/appointments/pq244plmzvisu9/location/LPTESV9XR4YB6/services" target="_blank" class="btn-dark">Book Your Detail Today</a>
   </div>
 </div>

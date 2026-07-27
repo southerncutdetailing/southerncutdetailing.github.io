@@ -1124,9 +1124,12 @@
     .contracts-grid { grid-template-columns: 1fr; }
     .gallery-grid {
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: repeat(3, 160px);
+      grid-auto-rows: 180px;
     }
-    .gallery-item:first-child { grid-row: span 1; }
+    .gallery-item:first-child {
+      grid-column: 1 / -1;
+      grid-row: auto;
+    }
 
     /* Hide scroll indicator on mobile */
     .hero-scroll { display: none; }
@@ -1202,7 +1205,7 @@
     <p class="hero-tagline">
       <span>Cleaner.</span> &nbsp; Sharper. &nbsp; <span>Southern.</span>
     </p>
-    <p class="hero-offer">New Customers — Mention This Ad for <strong>20% Off</strong> Your First Service</p>
+    <p class="hero-offer">New Customers Get <strong>20% Off</strong> Their First Service — No Code Needed</p>
     <div class="hero-cta-group">
       <a href="https://book.squareup.com/appointments/pq244plmzvisu9/location/LPTESV9XR4YB6/services" target="_blank" class="btn-primary"><span>Book Your Detail</span></a>
       <a href="#services" class="btn-secondary">View Services</a>
@@ -1566,7 +1569,7 @@
   <div class="cta-inner">
     <h2 class="cta-title">Ready for a Cleaner Vehicle?</h2>
     <p class="cta-sub">Book online in minutes. We come to you.</p>
-    <p class="cta-offer">New Customers: Mention This Ad for 20% Off Your First Service</p>
+    <p class="cta-offer">New Customers Get 20% Off Their First Service — Applied Automatically</p>
     <a href="https://book.squareup.com/appointments/pq244plmzvisu9/location/LPTESV9XR4YB6/services" target="_blank" class="btn-dark">Book Your Detail Today</a>
   </div>
 </div>
